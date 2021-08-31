@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    tools:context=".PlanYourTripActivity"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Plan Your Trip"
+            android:textColor="#101010"
+            android:textSize="42sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="338dp"
+            android:layout_height="171dp"
+            android:fontFamily="casual"
+            android:layout_marginVertical="30dp"
+            android:text='"Live life with no excuses and travel with no regrets"~ Oscar Wilde'
+            android:textColor="#131313"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/saveTheDateButton"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginVertical="50dp"
+            android:background="#CB020D5E"
+            android:layout_gravity="center"
+            android:text="Save the date !" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

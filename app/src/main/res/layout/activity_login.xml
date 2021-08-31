@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".LoginActivity"
+    android:background="@drawable/swim">
+
+    <EditText
+        android:id="@+id/username1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="User Name" />
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/username1"/>
+
+    <Button
+        android:id="@+id/btnsignin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/button_custom"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/password1"/>
+
+
+
+    <TextView
+        android:layout_width="396dp"
+        android:layout_height="67dp"
+        android:layout_alignTop="@+id/btnsignin1"
+        android:layout_alignBottom="@+id/btnsignin1"
+        android:layout_marginTop="-252dp"
+        android:layout_marginBottom="233dp"
+        android:text="Just a few steps..."
+        android:textStyle="bold"
+        android:textSize="40sp" />
+</RelativeLayout>

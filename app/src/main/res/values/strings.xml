@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Aapka Ek Lauta Tourist Guide</string>
+    <string name="hint_text">Chhatrapati Shivaji Maharaj Terminus</string>
+    <string name="description_title">Something about the place ....</string>
+    <string name="test_description">The Chhatrapati Shivaji Terminus (formerly Victoria Terminus) is located in Mumbai on the Western Part of India touching the shores of the Arabian Sea. This building, designed by F. W. Stevens, is spread across a 2.85 hectare area. The terminal was built over a period of 10 years starting in 1878. This is one of the finest functional Railway Station buildings of the world and is used by more than three million commuters daily. This property is an outstanding example of Victorian Gothic Architectural Revival in India, blended with the themes derived from Indian Traditional Architecture.</string>
+    <string name="add_a_review">ADD A REVIEW</string>
+    <string name="reviews_by_people">CLICK TO SEE WHAT OTHERS THINK OF THIS PLACE</string>
+    <string name="location">Location: </string>
+    <string name="entry_fees">Entry Fees:</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_new">New to this app? Register</string>
+    <string name="not_register">Not Register?</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="register">Register</string>
+    <string name="name_error">Please enter your name</string>
+    <string name="phone_error">Please enter your phone number</string>
+    <string name="email_error">Please enter your email address</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="password_error">Please enter a password</string>
+    <string name="error_invalid_password">Please enter a minimum password of 6 characters</string>
+    <string name="hey_rover_welcome">Hey Rover, Welcome!!!</string>
+    <string name="title_activity_side_bar">SideBarActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="view_locations_by_category">View Locations By Category</string>
+    <string name="explore_nearby">Explore Nearby</string>
+    <string name="plan_your_trip">Plan Your Trip</string>
+    <string name="explore_india">Explore India</string>
+</resources>
