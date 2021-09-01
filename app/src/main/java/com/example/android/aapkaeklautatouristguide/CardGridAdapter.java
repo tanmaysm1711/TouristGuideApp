@@ -31,9 +31,7 @@ public class CardGridAdapter extends BaseAdapter {
     }
 
     @Override
-    public long getItemId(int position) {
-        return 0;
-    }
+    public long getItemId(int position) {return 0;}
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -47,7 +45,7 @@ public class CardGridAdapter extends BaseAdapter {
         TextView touristPlaceName = convertView.findViewById(R.id.nameOfLocation);
 
         touristPlaceImage.setImageResource(touristPlaceImages[position]);
-        touristPlaceName.setText(touristPlaceNames[position]);
+            touristPlaceName.setText(touristPlaceNames[position]);
         return convertView;
     }
 }
