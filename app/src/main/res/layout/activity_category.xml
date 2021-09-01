@@ -71,7 +71,7 @@
                     android:textSize="25sp" />
 
                 <ListView
-                    android:id="@+id/sub_catagory"
+                    android:id="@+id/sub_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" />
@@ -113,7 +113,7 @@
                 </LinearLayout>
 
                 <ListView
-                    android:id="@+id/fearured_loc_list"
+                    android:id="@+id/featured_loc_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"/>
