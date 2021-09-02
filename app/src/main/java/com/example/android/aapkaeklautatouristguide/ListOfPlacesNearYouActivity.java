@@ -148,6 +148,5 @@ public class ListOfPlacesNearYouActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
     }
 }
