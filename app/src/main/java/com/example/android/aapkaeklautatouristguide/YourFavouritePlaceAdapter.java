@@ -18,7 +18,7 @@ public class YourFavouritePlaceAdapter extends BaseAdapter {
 
     LayoutInflater inflater;
 
-    public YourFavouritePlaceAdapter(Context context,int [] yourFavouritePlaceImage,String [] yourFavouritePlaceName ) {
+    public YourFavouritePlaceAdapter(Context context,String [] yourFavouritePlaceName ,int [] yourFavouritePlaceImage) {
      this.context=context;
      this.yourFavouritePlaceImage=yourFavouritePlaceImage;
      this.yourFavouritePlaceName=yourFavouritePlaceName;

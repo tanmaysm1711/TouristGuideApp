@@ -17,7 +17,7 @@ public class FeaturedLocAdapter extends BaseAdapter {
 
     LayoutInflater inflater;
 
-    public FeaturedLocAdapter(Context context,int [] featuredLocationImage,String []featuredLocationName) {
+    public FeaturedLocAdapter(Context context,String []featuredLocationName,int [] featuredLocationImage) {
         this.context=context;
         this.featuredLocationImage =featuredLocationImage;
         this.featuredLocationName =featuredLocationName;

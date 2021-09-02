@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -146,6 +147,16 @@ public class ListOfPlacesNearYouActivity extends AppCompatActivity{
                 intent.putExtra("timingsOfPlace", touristPlaceTimings[position]);
                 intent.putExtra("entryFeeOfPlace", touristPlaceEntryFee[position]);
                 startActivity(intent);
+            }
+        });
+
+
+        Button viewLocByCategoryButton = (Button) findViewById(R.id.view_loc_by_category_button) ;
+        viewLocByCategoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent categoryIntent = new Intent(ListOfPlacesNearYouActivity.this , CategoryActivity.class);
+                startActivity(categoryIntent);
             }
         });
 

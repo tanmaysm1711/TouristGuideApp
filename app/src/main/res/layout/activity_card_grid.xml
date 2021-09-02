@@ -24,6 +24,7 @@
             app:borderWidth="0dp" />
 
         <Button
+            android:id="@+id/view_loc_by_category_button"
             android:layout_width="252dp"
             android:layout_height="match_parent"
             android:background="@drawable/search_button"

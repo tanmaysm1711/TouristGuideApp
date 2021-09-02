@@ -21,6 +21,12 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".DescriptionActivity" />
         <activity android:name=".IntroductoryActivity" />
+        <activity android:name=".DummyLogin"/>
+        <activity android:name=".CategoryActivity"/>
+        <activity android:name=".PlanYourTripActivity"/>
+        <activity android:name=".SideBarActivity"/>
+        <activity android:name=".SideBarUserProfile"/>
+        <activity android:name=".SignUp"/>
     </application>
 
 </manifest>
