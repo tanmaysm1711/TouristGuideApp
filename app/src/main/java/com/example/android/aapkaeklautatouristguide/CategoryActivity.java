@@ -8,9 +8,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
+
     public String [] subCategoryName ={" Beach","Mountain","Monument","Temple","Waterfall","Market",
     "Gardens","Amusement Parks","Wildlife","Malls","snow"};
     public int [] subCategoryImage ={};
+
+
+    public String [] featuredLocationName ={ "Gateway of India","Sanjay Gandhi National Park","Haji Ali Dargah",
+            "Elephanta Caves","Siddhivinayak Temple","Chhatrapati Shivaji Terminus (CST)","ISKCON Temple",
+            "Shri Mahalakshmi Temple","Powai Lake,","Kidzania","EsselWorld"};
+    public int [] featuredLocationImage ={};
+
+
+    public String [] yourFavouritePlaceNmae={
+            "EsselWorld","Juhu Beach","Marine Drive",
+            "Chota Kashmir","Worli Sea Face","Hanging Gardens","Madh Island",
+            "Bandra-Worli Sea Link","Colaba Causeway","Mumbai Film City","Snow World"};
+    public int [] yourFavouritePlaceImage ={};
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

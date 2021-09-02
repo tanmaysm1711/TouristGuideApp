@@ -45,7 +45,7 @@ public class SubCategoryAdapter extends BaseAdapter {
             inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         if (convertView == null){
-            convertView  = inflater.inflate(R.layout.sub_categories,null);
+            convertView  = inflater.inflate(R.layout.sub_categories_element,null);
         }
 
         ImageView subCategoryImageObj =(ImageView) convertView.findViewById(R.id.sub_catagory_img);
