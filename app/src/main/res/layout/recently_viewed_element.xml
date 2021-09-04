@@ -14,7 +14,7 @@
         android:layout_margin="7dp"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/white"
-        app:cardElevation="30dp">
+        app:cardElevation="5dp">
 
 
         <LinearLayout
@@ -36,8 +36,8 @@
                     android:src="@drawable/elephanta_caves" />
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="28dp"
-                    android:layout_height="27dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginStart="7dp"
                     android:layout_marginTop="-95dp"
                     android:backgroundTint="@color/white"
@@ -61,17 +61,22 @@
                 android:text="Chhatrapati Shivaji Maharaj Terminus"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sniglet_regular"/>
 
             <RatingBar
                 android:id="@+id/ratingBar"
                 style="@style/Widget.AppCompat.RatingBar.Small"
-                android:layout_width="95dp"
-                android:layout_marginTop="5dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:progressBackgroundTint="#F0FFAC00"
-                android:scaleX="1.5"
-                android:scaleY="1.5" />
+                android:layout_marginTop="5dp"
+                android:numStars="5"
+                android:progressBackgroundTint="#F0838383"
+                android:progressTint="#F0FFAC00"
+                android:rating="4"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:stepSize="0.5" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
