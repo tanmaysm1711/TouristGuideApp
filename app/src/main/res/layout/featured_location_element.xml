@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/fearured_loc_element"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/featured_loc_element"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="140dp"
-        android:layout_height="185dp"
+        android:layout_width="180dp"
+        android:layout_height="220dp"
         android:layout_margin="5dp"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/white"
@@ -18,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_margin="7dp"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,8 +27,8 @@
 
                 <ImageView
                     android:id="@+id/imageOfLocation"
-                    android:layout_width="130dp"
-                    android:layout_height="125dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/elephanta_caves"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -58,12 +58,12 @@
             <TextView
                 android:id="@+id/nameOfLocation"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:gravity="start"
                 android:text="Chhatrapati Shivaji Maharaj Terminus"
                 android:textColor="@color/black"
-                android:textSize="10.5sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <RatingBar
@@ -71,6 +71,8 @@
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_marginTop="2dp"
                 android:progressBackgroundTint="#F0FFAC00" />
 
         </LinearLayout>

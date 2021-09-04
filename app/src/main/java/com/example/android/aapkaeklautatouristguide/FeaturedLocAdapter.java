@@ -8,8 +8,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class FeaturedLocAdapter extends BaseAdapter {
+import org.jetbrains.annotations.NotNull;
+
+
+public class FeaturedLocAdapter extends RecyclerView.Adapter<FeaturedLocAdapter.FeaturedLocViewHolder> {
 
     private int [] featuredLocationImage;
     private String [] featuredLocationName;
@@ -24,13 +29,15 @@ public class FeaturedLocAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() {
-        return featuredLocationName.length;
+    public FeaturedLocViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+        View view = inflater.from(context).inflate(R.layout.featured_location_element,parent,false);
+        return new FeaturedLocViewHolder(view);
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public void onBindViewHolder( FeaturedLocViewHolder holder, int position) {
+        holder.featuredLocationElementName.setText(featuredLocationName[position]);
+        holder.featuredLocationElementImage.setImageResource(featuredLocationImage[position]);
     }
 
     @Override
@@ -39,21 +46,22 @@ public class FeaturedLocAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup viewGroup) {
-        if( inflater==null){
-            inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public int getItemCount() {
+        return featuredLocationName.length;
+    }
+
+
+    public class FeaturedLocViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView featuredLocationElementName;
+        public ImageView featuredLocationElementImage;
+
+
+        public FeaturedLocViewHolder( View itemView) {
+            super(itemView);
+
+            featuredLocationElementName=itemView.findViewById(R.id.nameOfLocation);
+            featuredLocationElementImage=itemView.findViewById(R.id.imageOfLocation);
         }
-
-        if (convertView==null){
-            convertView = inflater.inflate(R.layout.featured_location_element,null);
-        }
-
-        ImageView imageOfLocation = (ImageView) convertView.findViewById(R.id.imageOfLocation);
-        TextView nameOfLocation = (TextView) convertView.findViewById((R.id.nameOfLocation));
-
-        imageOfLocation.setImageResource(featuredLocationImage[position]);
-        nameOfLocation.setText(featuredLocationName[position]);
-
-        return convertView;
     }
 }
