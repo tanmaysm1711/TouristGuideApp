@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -51,11 +53,14 @@ public class CategoryActivity extends AppCompatActivity {
         ListView subCategory = (ListView) findViewById(R.id.sub_category);
         ListView featuredLocList = (ListView) findViewById(R.id.featured_loc_list);
         ListView yourFavouritePlaceList = (ListView) findViewById(R.id.your_favourite_place_list);
-        ListView recentlyViewedList = (ListView) findViewById(R.id.recently_viewed_list);
+        RecyclerView recentlyViewedList = (RecyclerView) findViewById(R.id.recently_viewed_list);
 
         subCategory.setAdapter(new SubCategoryAdapter(this,subCategoryName,subCategoryImage));
         featuredLocList.setAdapter(new FeaturedLocAdapter(this,featuredLocationName,featuredLocationImage));
         yourFavouritePlaceList.setAdapter(new YourFavouritePlaceAdapter(this,yourFavouritePlaceNmae,yourFavouritePlaceImage));
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recentlyViewedList.setLayoutManager(linearLayoutManager);
         recentlyViewedList.setAdapter(new RecentlyViewedAdapter(this,recentlyViewedPlaceName,recentlyViewedPlaceImage));
 
     }

@@ -48,13 +48,12 @@ public class SubCategoryAdapter extends BaseAdapter {
             convertView  = inflater.inflate(R.layout.sub_categories_element,null);
         }
 
-        ImageView subCategoryImageObj =(ImageView) convertView.findViewById(R.id.sub_catagory_img);
+        ImageView subCategoryImageObj = (ImageView) convertView.findViewById(R.id.sub_catagory_img);
         TextView subCategoryNameObj = (TextView) convertView.findViewById(R.id.sub_catagory_name);
 
-        subCategoryImageObj.setImageResource( subCategoryImage[Position]);
+        subCategoryImageObj.setImageResource(subCategoryImage[Position]);
         subCategoryNameObj.setText(subCategoryName[Position]);
 
         return convertView ;
-
     }
 }

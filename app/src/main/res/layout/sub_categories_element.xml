@@ -14,19 +14,20 @@
         android:layout_height="136dp"
         android:layout_margin="7dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="5dp"
         app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="5dp">
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="5dp"
                 app:cardBackgroundColor="@color/white">
 
                 <ImageView
@@ -34,7 +35,7 @@
                     android:layout_width="117dp"
                     android:layout_height="102dp"
                     android:layout_gravity="center"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/todo"
                     android:scaleType="centerCrop"
                     tools:srcCompat="@tools:sample/avatars" />
             </androidx.cardview.widget.CardView>
@@ -43,10 +44,7 @@
                 android:id="@+id/sub_catagory_name"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_gravity="bottom"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="name"
+                android:layout_gravity="center"
                 android:textColor="#000000" />
 
         </LinearLayout>

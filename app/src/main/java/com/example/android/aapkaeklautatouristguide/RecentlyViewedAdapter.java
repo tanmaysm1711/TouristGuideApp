@@ -8,51 +8,46 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class RecentlyViewedAdapter extends BaseAdapter {
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAdapter.RecentlyViewedViewHolder> {
 
     private String [] recentlyViewedPlaceName;
     private int [] recentlyViewedPlaceImage;
     Context context;
 
-    LayoutInflater inflater;
-
-    public RecentlyViewedAdapter(Context context , String [] recentlyViewedPlaceName,int [] recentlyViewedPlaceImage) {
+    public RecentlyViewedAdapter(Context context , String [] recentlyViewedPlaceName, int [] recentlyViewedPlaceImage) {
         this.recentlyViewedPlaceImage=recentlyViewedPlaceImage;
         this.recentlyViewedPlaceName=recentlyViewedPlaceName;
         this.context=context;
     }
 
+    @NonNull
     @Override
-    public int getCount() {
+    public RecentlyViewedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.sub_categories_element, parent, false);
+        return new RecentlyViewedViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecentlyViewedViewHolder holder, int position) {
+        holder.imageOfLocation.setImageResource(recentlyViewedPlaceImage[position]);
+        holder.nameOfLocation.setText(recentlyViewedPlaceName[position]);
+    }
+
+    @Override
+    public int getItemCount() {
         return recentlyViewedPlaceName.length;
     }
 
-    @Override
-    public Object getItem(int i) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup viewGroup) {
-
-        if(inflater==null){
-         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public class RecentlyViewedViewHolder extends RecyclerView.ViewHolder{
+        ImageView imageOfLocation;
+        TextView nameOfLocation;
+        public RecentlyViewedViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imageOfLocation = (ImageView) itemView.findViewById(R.id.imageOfLocation);
+            nameOfLocation = (TextView) itemView.findViewById(R.id.nameOfLocation);
         }
-        if(convertView==null){
-            convertView = inflater.inflate(R.layout.recently_viewed_element,null);
-        }
-
-        ImageView imageOfLocation =(ImageView) convertView.findViewById(R.id.imageOfLocation);
-        TextView nameOfLocation = (TextView) convertView.findViewById(R.id.nameOfLocation);
-
-        imageOfLocation.setImageResource(recentlyViewedPlaceImage[position]);
-        nameOfLocation.setText(recentlyViewedPlaceName[position]);
-
-        return convertView;
     }
 }

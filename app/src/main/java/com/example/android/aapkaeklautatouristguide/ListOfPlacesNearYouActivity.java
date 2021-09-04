@@ -105,7 +105,7 @@ public class ListOfPlacesNearYouActivity extends AppCompatActivity{
                 R.drawable.worli_sea_face, R.drawable.hanging_gardens, R.drawable.madh_island_beach,
                 R.drawable.worli_sea_link, R.drawable.colaba_causeway, R.drawable.film_city, R.drawable.snow_world};
 
-        String[] touristPlaceLocation = {"Colaba, Mumbai", "Borivali East, Mumbai","Dargah Road, Mumbai",
+        String[] touristPlaceLocation = {"Colaba, Mumb  ai", "Borivali East, Mumbai","Dargah Road, Mumbai",
                 "Gharapuri, Mumbai","Prabhadevi, Mumbai","Chhatrapati Shivaji Terminus Area, Mumbai",
                 "Hare Krishna Land, Juhu, Mumbai","Mahalaxmi West, Cumballa Hill, Mumbai",
                 "Powai Valley, Mumbai","Ghatkopar West, Mumbai","Borivali West, Mumbai","Juhu Tara Road, Mumbai",
