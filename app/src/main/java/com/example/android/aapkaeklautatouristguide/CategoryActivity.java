@@ -1,6 +1,7 @@
 package com.example.android.aapkaeklautatouristguide;
 
 import android.os.Bundle;
+import android.widget.HorizontalScrollView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +49,7 @@ public class CategoryActivity extends AppCompatActivity {
                 ,R.drawable.chota_kashmir,R.drawable.worli_sea_face,R.drawable.hanging_gardens,R.drawable.madh_island_beach
                 ,R.drawable.worli_sea_face,R.drawable.colaba_causeway,R.drawable.film_city,R.drawable.snow_world};
 
-        ListView subCategory = (ListView) findViewById(R.id.sub_category);
+        HorizontalGridView subCategory = (HorizontalGridView) findViewById(R.id.sub_category);
         ListView featuredLocList = (ListView) findViewById(R.id.featured_loc_list);
         ListView yourFavouritePlaceList = (ListView) findViewById(R.id.your_favourite_place_list);
         RecyclerView recentlyViewedList = (RecyclerView) findViewById(R.id.recently_viewed_list);
