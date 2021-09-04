@@ -4,13 +4,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/recently_viewed_element"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="230dp"
-        android:layout_height="142dp"
+        android:layout_width="280dp"
+        android:layout_height="160dp"
         android:layout_margin="7dp"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/white"
@@ -30,14 +30,14 @@
 
                 <ImageView
                     android:id="@+id/imageOfLocation"
-                    android:layout_width="220dp"
+                    android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/elephanta_caves" />
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="22dp"
-                    android:layout_height="21dp"
+                    android:layout_width="28dp"
+                    android:layout_height="27dp"
                     android:layout_marginStart="7dp"
                     android:layout_marginTop="-95dp"
                     android:backgroundTint="@color/white"
@@ -45,8 +45,8 @@
                     app:cardElevation="5dp">
 
                     <View
-                        android:layout_width="14dp"
-                        android:layout_height="12dp"
+                        android:layout_width="18dp"
+                        android:layout_height="17dp"
                         android:layout_gravity="center"
                         android:background="@drawable/ic_heart" />
                 </androidx.cardview.widget.CardView>
@@ -55,19 +55,23 @@
             <TextView
                 android:id="@+id/nameOfLocation"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:gravity="start"
+                android:layout_height="20dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
                 android:text="Chhatrapati Shivaji Maharaj Terminus"
                 android:textColor="@color/black"
-                android:textSize="10.5sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <RatingBar
                 android:id="@+id/ratingBar"
                 style="@style/Widget.AppCompat.RatingBar.Small"
-                android:layout_width="wrap_content"
+                android:layout_width="95dp"
+                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:progressBackgroundTint="#F0FFAC00" />
+                android:progressBackgroundTint="#F0FFAC00"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -8,9 +8,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Text;
 
-public class YourFavouritePlaceAdapter extends BaseAdapter {
+public class YourFavouritePlaceAdapter extends RecyclerView.Adapter<YourFavouritePlaceAdapter.FavouritePlaceViewHolder> {
 
     private String [] yourFavouritePlaceName ;
     private int [] yourFavouritePlaceImage ;
@@ -24,14 +28,19 @@ public class YourFavouritePlaceAdapter extends BaseAdapter {
      this.yourFavouritePlaceName=yourFavouritePlaceName;
     }
 
+
+    @NonNull
+    @NotNull
     @Override
-    public int getCount() {
-        return yourFavouritePlaceImage.length;
+    public FavouritePlaceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = inflater.from(context).inflate(R.layout.recently_viewed_element,parent,false);
+        return new FavouritePlaceViewHolder(view) ;
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public void onBindViewHolder(FavouritePlaceViewHolder holder, int position) {
+        holder.yourFavouritePlaceElementName.setText(yourFavouritePlaceName[position]);
+        holder.yourFavouritePlaceElementImage.setImageResource(yourFavouritePlaceImage[position]);
     }
 
     @Override
@@ -40,20 +49,20 @@ public class YourFavouritePlaceAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup viewGroup) {
-        if( inflater==null){
-            inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public int getItemCount() {
+        return yourFavouritePlaceImage.length;
+    }
+
+
+    public class FavouritePlaceViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView yourFavouritePlaceElementName;
+        public ImageView yourFavouritePlaceElementImage;
+
+        public FavouritePlaceViewHolder(View itemView) {
+            super(itemView);
+            yourFavouritePlaceElementName = itemView.findViewById(R.id.nameOfLocation);
+            yourFavouritePlaceElementImage=itemView.findViewById(R.id.imageOfLocation);
         }
-        if(convertView==null){
-            convertView = inflater.inflate(R.layout.recently_viewed_element,null);
-        }
-
-        ImageView imageOfLocation = (ImageView) convertView.findViewById(R.id.imageOfLocation);
-        TextView nameOfLocation =(TextView) convertView.findViewById(R.id.nameOfLocation);
-
-        imageOfLocation.setImageResource(yourFavouritePlaceImage[position]);
-        nameOfLocation.setText(yourFavouritePlaceName[position]);
-
-        return convertView;
     }
 }

@@ -4,11 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SubCategoryAdapter extends BaseAdapter {
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import org.jetbrains.annotations.NotNull;
+
+public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.SubCategoryViewHolder> {
 
     private String [] subCategoryName;
     private int [] subCategoryImage;
@@ -22,15 +26,18 @@ public class SubCategoryAdapter extends BaseAdapter {
         this.subCategoryName=subCategoryName;
     }
 
-
+    @NonNull
+    @NotNull
     @Override
-    public int getCount() {
-        return subCategoryName.length;
+    public SubCategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = inflater.from(context).inflate(R.layout.sub_categories_element,parent,false);
+        return new SubCategoryViewHolder(view) ;
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public void onBindViewHolder(SubCategoryViewHolder holder, int position) {
+        holder.subCategoryElementName.setText(subCategoryName[position]);
+        holder.subCategoryElementImage.setImageResource(subCategoryImage[position]);
     }
 
     @Override
@@ -39,21 +46,19 @@ public class SubCategoryAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int Position, View convertView, ViewGroup viewGroup) {
+    public int getItemCount() {
+        return subCategoryName.length;
+    }
 
-        if(inflater==null){
-            inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public class SubCategoryViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView subCategoryElementName;
+        public ImageView subCategoryElementImage;
+
+        public SubCategoryViewHolder(View view) {
+            super(view);
+            subCategoryElementName= view.findViewById(R.id.sub_catagory_name) ;
+            subCategoryElementImage = view.findViewById(R.id.sub_catagory_img);
         }
-        if (convertView == null){
-            convertView  = inflater.inflate(R.layout.sub_categories_element,null);
-        }
-
-        ImageView subCategoryImageObj = (ImageView) convertView.findViewById(R.id.sub_catagory_img);
-        TextView subCategoryNameObj = (TextView) convertView.findViewById(R.id.sub_catagory_name);
-
-        subCategoryImageObj.setImageResource(subCategoryImage[Position]);
-        subCategoryNameObj.setText(subCategoryName[Position]);
-
-        return convertView ;
     }
 }

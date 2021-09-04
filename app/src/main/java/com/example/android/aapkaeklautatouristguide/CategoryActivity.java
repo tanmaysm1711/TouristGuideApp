@@ -1,14 +1,11 @@
 package com.example.android.aapkaeklautatouristguide;
 
 import android.os.Bundle;
-import android.widget.HorizontalScrollView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
 
@@ -28,7 +25,7 @@ public class CategoryActivity extends AppCompatActivity {
             ,R.drawable.essel_world};
 
 
-    public String [] yourFavouritePlaceNmae={
+    public String [] yourFavouritePlaceName={
             "EsselWorld","Juhu Beach","Marine Drive",
             "Chota Kashmir","Worli Sea Face","Hanging Gardens","Madh Island",
             "Bandra-Worli Sea Link","Colaba Causeway","Mumbai Film City","Snow World"};
@@ -49,17 +46,25 @@ public class CategoryActivity extends AppCompatActivity {
                 ,R.drawable.chota_kashmir,R.drawable.worli_sea_face,R.drawable.hanging_gardens,R.drawable.madh_island_beach
                 ,R.drawable.worli_sea_face,R.drawable.colaba_causeway,R.drawable.film_city,R.drawable.snow_world};
 
-        HorizontalGridView subCategory = (HorizontalGridView) findViewById(R.id.sub_category);
-        ListView featuredLocList = (ListView) findViewById(R.id.featured_loc_list);
-        ListView yourFavouritePlaceList = (ListView) findViewById(R.id.your_favourite_place_list);
+        RecyclerView subCategoryList = (RecyclerView) findViewById(R.id.sub_category);
+        RecyclerView featuredLocList = (RecyclerView) findViewById(R.id.featured_loc_list);
+        RecyclerView yourFavouritePlaceList = (RecyclerView) findViewById(R.id.your_favourite_place_list);
         RecyclerView recentlyViewedList = (RecyclerView) findViewById(R.id.recently_viewed_list);
 
-        subCategory.setAdapter(new SubCategoryAdapter(this,subCategoryName,subCategoryImage));
-        featuredLocList.setAdapter(new FeaturedLocAdapter(this,featuredLocationName,featuredLocationImage));
-        yourFavouritePlaceList.setAdapter(new YourFavouritePlaceAdapter(this,yourFavouritePlaceNmae,yourFavouritePlaceImage));
+        LinearLayoutManager subCategoryLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        subCategoryList.setLayoutManager(subCategoryLinearLayoutManager);
+        subCategoryList.setAdapter(new SubCategoryAdapter(this,subCategoryName,subCategoryImage));
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recentlyViewedList.setLayoutManager(linearLayoutManager);
+        LinearLayoutManager featuredLocLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        featuredLocList.setLayoutManager(featuredLocLayoutManager);
+        featuredLocList.setAdapter(new FeaturedLocAdapter(this,featuredLocationName,featuredLocationImage));
+
+        LinearLayoutManager yourFavouritePlaceLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        yourFavouritePlaceList.setLayoutManager(yourFavouritePlaceLayoutManager);
+        yourFavouritePlaceList.setAdapter(new YourFavouritePlaceAdapter(this,yourFavouritePlaceName,yourFavouritePlaceImage));
+
+        LinearLayoutManager recentlyViewedLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recentlyViewedList.setLayoutManager(recentlyViewedLinearLayoutManager);
         recentlyViewedList.setAdapter(new RecentlyViewedAdapter(this,recentlyViewedPlaceName,recentlyViewedPlaceImage));
     }
 }
