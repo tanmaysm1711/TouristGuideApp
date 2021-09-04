@@ -36,19 +36,17 @@ public class CategoryActivity extends AppCompatActivity {
             ,R.drawable.worli_sea_face,R.drawable.colaba_causeway,R.drawable.film_city,R.drawable.snow_world};
 
 
-    public String [] recentlyViewedPlaceName={
-            "EsselWorld","Juhu Beach","Marine Drive",
-            "Chota Kashmir","Worli Sea Face","Hanging Gardens","Madh Island",
-            "Bandra-Worli Sea Link","Colaba Causeway","Mumbai Film City","Snow World"};
-    public int [] recentlyViewedPlaceImage ={R.drawable.essel_world,R.drawable.juhu_beach,R.drawable.marine_drive
-            ,R.drawable.chota_kashmir,R.drawable.worli_sea_face,R.drawable.hanging_gardens,R.drawable.madh_island_beach
-            ,R.drawable.worli_sea_face,R.drawable.colaba_causeway,R.drawable.film_city,R.drawable.snow_world};
-
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+
+        String [] recentlyViewedPlaceName={
+                "EsselWorld","Juhu Beach","Marine Drive",
+                "Chota Kashmir","Worli Sea Face","Hanging Gardens","Madh Island",
+                "Bandra-Worli Sea Link","Colaba Causeway","Mumbai Film City","Snow World"};
+        int [] recentlyViewedPlaceImage ={R.drawable.essel_world,R.drawable.juhu_beach,R.drawable.marine_drive
+                ,R.drawable.chota_kashmir,R.drawable.worli_sea_face,R.drawable.hanging_gardens,R.drawable.madh_island_beach
+                ,R.drawable.worli_sea_face,R.drawable.colaba_causeway,R.drawable.film_city,R.drawable.snow_world};
 
         ListView subCategory = (ListView) findViewById(R.id.sub_category);
         ListView featuredLocList = (ListView) findViewById(R.id.featured_loc_list);
@@ -62,6 +60,5 @@ public class CategoryActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recentlyViewedList.setLayoutManager(linearLayoutManager);
         recentlyViewedList.setAdapter(new RecentlyViewedAdapter(this,recentlyViewedPlaceName,recentlyViewedPlaceImage));
-
     }
 }
