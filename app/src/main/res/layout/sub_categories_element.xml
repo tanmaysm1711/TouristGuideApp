@@ -47,7 +47,9 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="@font/sniglet_regular"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
