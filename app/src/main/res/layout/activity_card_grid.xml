@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="horizontal"
-            android:background="@color/white"
+            android:background="#41D2CA"
             android:gravity="center_vertical">
 
             <LinearLayout
@@ -99,7 +99,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
-                    android:backgroundTint="#DF8888"
+                    android:backgroundTint="#FFFFFF"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp">
@@ -115,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/explore_nearby"
-                    android:textColor="@color/text_color"
+                    android:textColor="#FFFFFF"
                     android:textSize="11sp"
                     android:textStyle="bold"
                     tools:ignore="SmallSp" />
@@ -139,7 +139,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
-                    android:backgroundTint="#88DADF"
+                    android:backgroundTint="#FFFFFF"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp">
 
@@ -155,7 +155,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/explore_india"
-                    android:textColor="@color/text_color"
+                    android:textColor="#FFFFFF"
                     android:textSize="11sp"
                     android:textStyle="bold"
                     tools:ignore="SmallSp" />
