@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,38 +7,40 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <ImageView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="699dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/after_login_bg" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#41D2CA"
+        android:foregroundGravity="bottom"
+        app:cardCornerRadius="65dp"
+        app:cardElevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="169dp">
-
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:backgroundTint="#41D2CA"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="10dp"
-            app:cardCornerRadius="65dp"
-            app:cardElevation="100dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="110dp"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="50dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/explore_nearby"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="5dp"
                     android:backgroundTint="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="40dp"
                     app:cardElevation="10dp">
 
@@ -53,21 +55,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Explore "
-                    android:textColor="@color/text_color"
-                    android:textSize="16.5sp" />
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="110dp"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="240dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="5dp"
@@ -78,8 +81,8 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="45dp"
-                        android:src="@drawable/india_icon"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/india_icon" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -87,11 +90,37 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/explore_india"
-                    android:textColor="@color/text_color"
-                    android:textSize="16.5sp" />
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_page"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_page"
+            app:layout_constraintVertical_weight="1" />
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

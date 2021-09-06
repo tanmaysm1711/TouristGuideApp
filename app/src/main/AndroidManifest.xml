@@ -9,24 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".ListOfPlacesNearYouActivity">
+        <activity android:name=".AfterLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".RatingActivity"/>
-        <activity android:name=".RegisterActivity"/>
         <activity android:name=".DescriptionActivity" />
-        <activity android:name=".IntroductoryActivity" />
-        <activity android:name=".DummyLogin"/>
         <activity android:name=".CategoryActivity"/>
-        <activity android:name=".PlanYourTripActivity"/>
-        <activity android:name=".SideBarActivity"/>
-        <activity android:name=".SideBarUserProfile"/>
-        <activity android:name=".SignUp"/>
+        <activity android:name=".ListOfPlacesNearYouActivity"/>
     </application>
 
 </manifest>
