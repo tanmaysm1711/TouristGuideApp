@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DescriptionActivity" />
-        <activity android:name=".CategoryActivity"/>
-        <activity android:name=".ListOfPlacesNearYouActivity"/>
+        <activity android:name=".CategoryFragment"/>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

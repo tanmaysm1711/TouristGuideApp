@@ -42,4 +42,6 @@
     <string name="recently_viewed">Recently Viewed</string>
     <string name="todo">TODO</string>
     <string name="all_featured_locations">ALL FEATURED LOCATIONS</string>
+    <string name="category_view">Category View</string>
+    <string name="tourist_guide_app">Tourist Guide App</string>
 </resources>
