@@ -55,10 +55,10 @@
             app:cardElevation="10dp">
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_search" />
+                android:src="@drawable/ic_baseline_search_24" />
 
         </androidx.cardview.widget.CardView>
 
@@ -107,7 +107,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_nearby_icon" />
+                        android:src="@drawable/ic_baseline_my_location_24" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
@@ -145,10 +145,10 @@
                     app:cardElevation="10dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_nearby_icon" />
+                        android:src="@drawable/ic_baseline_view_module_24" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
@@ -188,7 +188,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/india_icon" />
+                        android:src="@drawable/india" />
 
                 </androidx.cardview.widget.CardView>
 
