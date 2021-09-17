@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="touristPlaceImages">
+        <item>@drawable/gateway_of_india</item>
+        <item>@drawable/sgnp</item>
+        <item>@drawable/haji_ali</item>
+        <item>@drawable/elephanta_caves</item>
+        <item>@drawable/siddhivinayak_mandir</item>
+        <item>@drawable/chhatrapati_shivaji_terminus</item>
+        <item>@drawable/iskcon_temple</item>
+        <item>@drawable/mahalakhmi_mandir</item>
+        <item>@drawable/powai_lake</item>
+        <item>@drawable/kidzania</item>
+        <item>@drawable/essel_world</item>
+        <item>@drawable/juhu_beach</item>
+        <item>@drawable/marine_drive</item>
+        <item>@drawable/chota_kashmir</item>
+        <item>@drawable/worli_sea_face</item>
+        <item>@drawable/hanging_gardens</item>
+        <item>@drawable/madh_island_beach</item>
+        <item>@drawable/worli_sea_link</item>
+        <item>@drawable/colaba_causeway</item>
+        <item>@drawable/film_city</item>
+        <item>@drawable/snow_world</item>
+    </integer-array>
+</resources>
