@@ -22,7 +22,7 @@
                 <item
                     android:id="@+id/food_amp_beverages"
                     android:icon="@drawable/ic_baseline_fastfood_24"
-                    android:title="@string/food_amp_beverages" />
+                    android:title="@string/my_calander" />
             </menu>
         </item>
     </group>
@@ -43,7 +43,7 @@
                 <item
                     android:id="@+id/my_note"
                     android:icon="@drawable/ic_baseline_event_note_24"
-                    android:title="@string/my_note" />
+                    android:title="@string/my_notes" />
             </menu>
         </item>
 

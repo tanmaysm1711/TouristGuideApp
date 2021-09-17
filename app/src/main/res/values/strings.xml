@@ -44,4 +44,17 @@
     <string name="all_featured_locations">ALL FEATURED LOCATIONS</string>
     <string name="category_view">Category View</string>
     <string name="tourist_guide_app">Tourist Guide App</string>
+    <string name="accomodation_amp_stay"><![CDATA[Accomodation & Stay]]></string>
+    <string name="hotels_amp_lodges"><![CDATA[Hotels & Lodges]]></string>
+    <string name="rent_car_bike">Rent Car Bike</string>
+    <string name="cabs">Cabs</string>
+    <string name="food_amp_beverages"><![CDATA[Food & Beverages]]></string>
+    <string name="my_calander">My Calander</string>
+    <string name="my_bucket_list">My Bucket List</string>
+    <string name="my_notes">My Notes</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="chat_bot">Chat Bot</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="open_drawer_content">Open Drawer Content Desc Res</string>
+    <string name="close_drawer_content">Close Drawer Content Desc Rse</string>
 </resources>
