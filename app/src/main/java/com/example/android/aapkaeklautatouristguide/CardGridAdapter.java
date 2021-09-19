@@ -1,6 +1,8 @@
 package com.example.android.aapkaeklautatouristguide;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,13 +10,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static android.content.ContentValues.TAG;
+
 public class CardGridAdapter extends BaseAdapter {
     Context context;
     String[] touristPlaceNames;
-    int[] touristPlaceImages;
+    TypedArray touristPlaceImages;
 
     LayoutInflater inflater;
-    public CardGridAdapter(Context context, String[] touristPlaceNames, int[] touristPlaceImages) {
+    public CardGridAdapter(Context context, String[] touristPlaceNames, TypedArray touristPlaceImages) {
         this.context = context;
         this.touristPlaceNames = touristPlaceNames;
         this.touristPlaceImages = touristPlaceImages;
@@ -44,8 +48,8 @@ public class CardGridAdapter extends BaseAdapter {
         ImageView touristPlaceImage = convertView.findViewById(R.id.imageOfLocation);
         TextView touristPlaceName = convertView.findViewById(R.id.nameOfLocation);
 
-        touristPlaceImage.setImageResource(touristPlaceImages[position]);
-            touristPlaceName.setText(touristPlaceNames[position]);
+        touristPlaceImage.setImageDrawable(touristPlaceImages.getDrawable(position));
+        touristPlaceName.setText(touristPlaceNames[position]);
         return convertView;
     }
 }

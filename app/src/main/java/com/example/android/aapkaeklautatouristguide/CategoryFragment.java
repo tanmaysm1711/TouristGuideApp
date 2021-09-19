@@ -15,19 +15,18 @@ import org.jetbrains.annotations.NotNull;
 
 public class CategoryFragment extends Fragment {
 
-    View rootview;
+    View rootView;
 
     @Nullable
-    @org.jetbrains.annotations.Nullable
     @Override
-    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        rootview = inflater.inflate(R.layout.fragment_category, container, false);
+        rootView = inflater.inflate(R.layout.fragment_category, container, false);
 
-        RecyclerView subCategoryList = (RecyclerView) rootview.findViewById(R.id.sub_category);
-        RecyclerView featuredLocList = (RecyclerView) rootview.findViewById(R.id.featured_loc_list);
-        RecyclerView yourFavouritePlaceList = (RecyclerView) rootview.findViewById(R.id.your_favourite_place_list);
-        RecyclerView recentlyViewedList = (RecyclerView) rootview.findViewById(R.id.recently_viewed_list);
+        RecyclerView subCategoryList = (RecyclerView) rootView.findViewById(R.id.sub_category);
+        RecyclerView featuredLocList = (RecyclerView) rootView.findViewById(R.id.featured_loc_list);
+        RecyclerView yourFavouritePlaceList = (RecyclerView) rootView.findViewById(R.id.your_favourite_place_list);
+        RecyclerView recentlyViewedList = (RecyclerView) rootView.findViewById(R.id.recently_viewed_list);
 
         LinearLayoutManager subCategoryLinearLayoutManager = new LinearLayoutManager((MainActivity) getActivity(), LinearLayoutManager.HORIZONTAL, false);
         subCategoryList.setLayoutManager(subCategoryLinearLayoutManager);
@@ -45,7 +44,7 @@ public class CategoryFragment extends Fragment {
         recentlyViewedList.setLayoutManager(recentlyViewedLinearLayoutManager);
         recentlyViewedList.setAdapter(new RecentlyViewedAdapter((MainActivity) getActivity(), recentlyViewedPlaceName, recentlyViewedPlaceImage));
 
-        return rootview;
+        return rootView;
     }
 
     public String[] subCategoryName = {" Beach", "Mountain", "Monument", "Temple", "Waterfall", "Market",

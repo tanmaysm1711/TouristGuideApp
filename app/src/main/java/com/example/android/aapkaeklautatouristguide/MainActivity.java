@@ -26,16 +26,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState == null) {
-            addExploreNearbyFragment();
-        }
+        addExploreNearbyFragment();
 
-        drawerLayout=findViewById(R.id.drawer_layout);
-        navigationView =findViewById(R.id.nav_view);
+//        if (savedInstanceState == null) {
+//            addExploreNearbyFragment();
+//        }
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open_drawer_content,R.string.close_drawer_content);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+//        drawerLayout=findViewById(R.id.drawer_layout);
+//        navigationView =findViewById(R.id.nav_view);
+//
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open_drawer_content,R.string.close_drawer_content);
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
 
         LinearLayout exploreNearbyLayout = (LinearLayout) findViewById(R.id.explore_nearby_layout);
         exploreNearbyLayout.setOnClickListener(new View.OnClickListener() {
@@ -45,14 +47,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout catagoryViewLayout = (LinearLayout) findViewById(R.id.catagory_view_layout);
-        catagoryViewLayout.setOnClickListener(new View.OnClickListener() {
+        LinearLayout categoryViewLayout = (LinearLayout) findViewById(R.id.catagory_view_layout);
+        categoryViewLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addCategoryFragment();
             }
         });
-//
 
 //        LinearLayout exploreIndiaLayout = (LinearLayout) findViewById(R.id.explore_india_layout);
 //        exploreIndiaLayout.setOnClickListener(new View.OnClickListener() {
@@ -66,9 +67,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addExploreNearbyFragment() {
-        ExploreNearbyFragment fragment = new ExploreNearbyFragment();
+        NearbyFragment fragment = new NearbyFragment(this);
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
+
         fragmentTransaction.replace(R.id.container, fragment);
         Log.i(TAG, "replace_ExploreNearbyFragment: ");
         fragmentTransaction.commit();
