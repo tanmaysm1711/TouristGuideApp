@@ -4,7 +4,9 @@
     <group android:checkableBehavior="single">
 
         <item android:title="@string/accomodation_amp_stay">
+
             <menu>
+
                 <item
                     android:id="@+id/hotels_amp_lodges"
                     android:icon="@drawable/ic_hotel_black"
@@ -19,10 +21,12 @@
                     android:id="@+id/cabs"
                     android:icon="@drawable/ic_cabs_grey"
                     android:title="@string/cabs" />
+
                 <item
                     android:id="@+id/food_amp_beverages"
                     android:icon="@drawable/ic_baseline_fastfood_24"
-                    android:title="@string/my_calander" />
+                    android:title="@string/food_amp_beverages" />
+
             </menu>
         </item>
     </group>
@@ -46,7 +50,6 @@
                     android:title="@string/my_notes" />
             </menu>
         </item>
-
     </group>
 
     <group android:checkableBehavior="single">
