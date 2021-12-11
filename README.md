@@ -3,9 +3,7 @@
 TouristGuideApp is a practice Android App Developement project...
 Here is a glimpse....
 
-![WhatsApp Image 2021-12-11 at 21 12 37](https://user-images.githubusercontent.com/85985334/145682685-526924b7-8b40-4338-a31e-ca74a3e2e569.jpeg)
-
-![WhatsApp Image 2021-12-11 at 21 12 37 (1)](https://user-images.githubusercontent.com/85985334/145682691-fe711308-906d-4770-a673-a3114f5bd20f.jpeg)
+![WhatsApp Image 2021-12-11 at 21 12 37](https://user-images.githubusercontent.com/85985334/145682685-526924b7-8b40-4338-a31e-ca74a3e2e569.jpeg) ![WhatsApp Image 2021-12-11 at 21 12 37 (1)](https://user-images.githubusercontent.com/85985334/145682691-fe711308-906d-4770-a673-a3114f5bd20f.jpeg)
 
 ![WhatsApp Image 2021-12-11 at 21 12 37 (4)](https://user-images.githubusercontent.com/85985334/145682708-82b7e634-4e07-417f-b801-ba87f7f46b81.jpeg)
 
